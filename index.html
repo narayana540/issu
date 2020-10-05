@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="./index.css">
+  <script type="text/javascript" src="./member.js"></script>
+  <script type="text/javascript" src="./project.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
+  <script type="text/javascript" src="./issues.js"></script>
+  <script type="text/javascript" src="./projectcontent.js"></script>
+  <script type="text/javascript" src="./ContentCreator.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Project Issue Tracking</h1>
+    <div class="txt">
+      <button class="btn btn-primary" onclick="addProjectData()">ProjectsData</button><br><br>
+      <div id="hiddenData">
+        <label>Projects List:</label>
+        <select id="sel" name="proj" onchange="show(this)">
+        </select>
+        <h2>Technology Based On Project</h2>
+        <div class="jumbotron" id="jumbo">
+
+          <p id="msg"></p>
+        </div>
+      </div>
+      <div id="loginDetails">
+        <div id="loginData">
+          <label>Login :</label>
+          <input id="issueIdCondition"><br>
+          <button class="btn btn-primary btn1" onclick="getIssueDetails()">Get Issue Information</button>
+        </div>
+        <div id="selctedItem">
+          <select id="sel1" onchange="showIssues(this)">
+          </select>
+        </div>
+        <div id="jumboValue">
+          <h2>Based on Department showing issues and pending issues </h2>
+          <div class="jumbotron" id="jumbo2">
+
+            <p id="issueMsg"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
